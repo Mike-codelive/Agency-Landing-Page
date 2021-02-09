@@ -10,6 +10,8 @@ header .hero-desc, .gallery, footer, .cards, .about, .team, .arc {
   margin: 0 auto;
   padding: 4rem; }
 
+/* Mixings
+-------------------------------------------------------------- */
 /* Reset
 -------------------------------------------------------------- */
 *,
@@ -265,6 +267,33 @@ footer .footer-li h1 {
     .card__price-value {
       font-size: 5rem; } }
 
+.heading-secondary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #1A7472, #07615F);
+  color: transparent;
+  -webkit-background-clip: text;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  @media screen and (min-width: 1366px) {
+    .heading-secondary {
+      font-size: 3.5rem; } }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1rem; }
+
+.popup__text {
+  font-size: 1rem; }
+
+.nav-link h4 {
+  background-image: linear-gradient(to right, #1A7472, #07615F);
+  color: transparent; }
+
 .navbar {
   padding: .5rem 2rem;
   backdrop-filter: blur(9px);
@@ -314,9 +343,6 @@ footer .footer-li h1 {
       display: block;
       text-transform: capitalize;
       padding: 1rem 0; }
-      @media screen and (min-width: 1366px) {
-        .navbar .nav-links .nav-link {
-          color: #8c8c8c; } }
       .navbar .nav-links .nav-link {
         position: relative; }
       .navbar .nav-links .nav-link:before {
@@ -589,3 +615,106 @@ footer {
         text-align: initial;
         margin-left: 5rem;
         justify-content: flex-start; } }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: #777;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1; }
+  .popup__close:hover {
+    color: white; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .5s .2s; }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem 2.5rem; }
+    @media screen and (min-width: 1366px) {
+      .popup__right {
+        padding: 3rem 5rem; } }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    margin-bottom: 4rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid #eee;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
