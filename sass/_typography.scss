@@ -1,0 +1,185 @@
+.hero-title {
+	font-size: 2rem;
+	color: $color-primary;
+	@media screen and (min-width: 1366px) {
+		font-size: 5rem;
+	}
+	@media screen and (min-width: 1024px) and (min-height: 1366px) {
+		font-size: 5rem;
+	}
+}
+.hero-text {
+	@media screen and (min-width: 1366px) {
+		font-size: 1.4rem;
+	}
+	@media screen and (min-width: 1024px) and (min-height: 1366px) {
+		font-size: 2rem;
+	}
+}
+.gallery-title {
+	font-size: 3rem;
+	text-transform: capitalize;
+	margin-bottom: .5rem;
+}
+.gallery-details {
+	color: lighten(black, 55%);
+}
+.img-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: -7rem;
+	color: white;
+	padding: 0 1.5rem;
+	font-size: 1rem;
+	flex-wrap: wrap;
+	@media screen and (min-width: 1366px) {
+		padding: 0 3rem;
+		font-size: 1.5rem;
+	}
+	font-family: $font-secondary;
+	h1 {
+		font-family: $font-primary;
+		text-transform: capitalize;
+	}
+	p {
+		color: lighten(black, 85%);
+	}
+	a {
+		align-self: flex-end;
+		&:hover i {
+			transform: rotateZ(85deg);
+		}
+		i {
+			margin-left: 1rem;
+			transition: all 0.4s linear;
+		}
+	}
+}
+.card-info {
+	grid-row: 1 / 2;
+	.card-title {
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		margin-bottom: .5rem;
+	}
+	.card-price {
+		color: lighten(black, 55%);
+		margin-bottom: .5rem;
+	}
+	.card-description {
+		color: lighten(black, 55%);
+	}
+}
+.about {
+	.about-title {
+		text-transform: capitalize;
+		font-size: 3rem;
+		border-bottom: 1px solid lighten(black, 55%);
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+	}
+	.about-info {
+		color: lighten(black, 55%);
+		& > :not(:last-child) {
+			margin-right: 1.5rem;
+		}
+		h3 {
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		p {
+			font-family: $font-secondary;
+		}
+	}
+}
+.teammate-data {
+	font-family: $font-secondary;
+	& > *{
+		font-weight: 300;
+	}
+}
+.team-info {
+	text-align: center;
+	h1 {
+		// color: lighten(black, 55%);
+		font-family: $font-primary;
+		font-size: 2rem;
+		font-weight: 300;
+		color: $color-primary;
+		@media screen and (min-width: 1366px) {
+			font-family: $font-secondary;
+		}
+	}
+}
+.arc-info {
+	color: lighten(black, 55%);
+	& > * {
+		font-weight: 300;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	p {
+		font-size: 1rem;
+	}
+}
+footer {
+	h1 {
+		font-family: $font-primary;
+		text-transform: capitalize;
+		font-size: 1.5rem;
+		position: relative;
+	}
+	.footer-first {
+		text-transform: uppercase;
+		&::after {
+			content: ".";
+			font-size: 4.5rem;
+			position: absolute;
+			top: -51px;
+
+		}
+	}
+	p {
+		font-family: $font-secondary;
+		color: lighten(black, 55%);
+	}
+	li {
+		font-family: $font-secondary;
+	}
+	a {
+		color: lighten(black, 55%);
+		text-transform: capitalize;
+	}
+	.footer-icons > * {
+		color: black;
+	}
+	.footer-li {
+		h1 {
+			font-size: 1rem;
+		}
+	}
+}
+.card__price-box {
+	text-align: center;
+	color: $color-white;
+	margin-bottom: 3rem;
+	@media screen and (min-width: 700px) {
+		margin-bottom: 8rem;
+	}
+}
+.card__price-only {
+	font-size: 1rem;
+	text-transform: uppercase;
+	@media screen and (min-width: 1366px) {
+		font-size: 1.4rem;
+	}
+}
+.card__price-value {
+	font-size: 3rem;
+	font-weight: 100;
+	@media screen and (min-width: 1366px) {
+		font-size: 5rem;
+	}
+}
+

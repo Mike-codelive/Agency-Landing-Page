@@ -1,0 +1,127 @@
+.team {
+
+	@extend %max-width-center;
+	background-size: calc(100vw - 8rem);
+	background: url("../img/Large-Triangles.svg") center/cover no-repeat;
+	@media screen and (min-width: 1366px) {
+		padding-bottom: 30rem;
+		// flex-wrap: unset;
+	}
+
+	.team-show {
+
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+
+		&--positioning {
+			// position: absolute;
+			top: 5rem;
+			width: 1rem;
+			height: 1rem;
+		}
+
+			// testing card
+
+			.card {
+				perspective: 150rem;
+				position: relative;
+				height: 499.33px;
+				@media screen and (max-width: 545px) {
+					height: 352.33px;
+				}
+
+				&__side {
+					height: 100%;
+					transition: all .8s ease;
+					position: absolute;
+					top: 5rem;
+					left: 0;
+					width: 100%;
+					backface-visibility: hidden;
+					box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+					&::before {
+						content: ""
+					}
+
+					&--front {
+
+					}
+
+					&--back {
+						background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+						transform: rotateY(180deg);
+					}
+				}
+				&:hover .card__side--front {
+					transform: rotateY(180deg) translateY(-5rem);
+				}
+				&:hover .card__side--back {
+					transform: rotateY(0deg) translateY(-5rem);
+				}
+
+				&__cta {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 90%;
+					text-align: center;
+				}
+
+				&__price-box {
+					text-align: center;
+					color: $color-white;
+					margin-bottom: 4rem;
+				}
+
+			}
+			// testing card
+
+			@media screen and (min-width: 1366px) {
+				margin-top: -15rem;
+				flex-wrap: unset;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				border-bottom: 2px solid $color-primary;
+				bottom: 0;
+				width: 85%;
+			}
+
+			.team-member {
+
+				width: 25rem;
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				padding-bottom: 5rem;
+
+				.teammate-data {
+
+					background: white;
+					padding: 2rem;
+				}
+			}
+		}
+
+		.team-info {
+			display: block;
+			h1 {
+				margin-bottom: 5rem;
+			}
+			a {
+				place-self: flex-start;
+			}
+
+			@media screen and (min-width: 1366px) {
+				display: flex;
+				justify-content: space-between;
+				padding: 5rem;
+			}
+		}
+	}

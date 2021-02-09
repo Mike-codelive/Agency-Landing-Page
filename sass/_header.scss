@@ -1,0 +1,56 @@
+header {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: url("../img/Large-Triangles.svg") center/cover no-repeat;
+  @media screen and (min-width: 1366px) {
+    background: transparent;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    backdrop-filter: blur(6px);
+    z-index: 1;
+  }
+
+  .bg-video {
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+
+    @media screen and (min-width: 1366px) {
+      display: inline-block;
+    }
+  }
+
+  .hero-desc {
+    @extend %max-width-center;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .hero-title {
+    padding-bottom: 2rem;
+    @media screen and (min-width: 1366px) {
+      display: inline-block;
+    }
+  }
+
+  .hero-text {
+    color: white;
+    margin-bottom: 3rem;
+  }
+}

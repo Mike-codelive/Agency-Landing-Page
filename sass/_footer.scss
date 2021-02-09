@@ -1,0 +1,35 @@
+footer {
+
+	@extend %max-width-center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	.footer-travel {
+		width: 15rem;
+		margin-bottom: 3rem;
+		margin-right: 3rem;
+		& > :not(:last-child) {
+			margin-bottom: 1rem
+		}
+	}
+
+	.footer-icons {
+		// display: flex;
+		// justify-content: space-around;
+		& > :not(:last-child) {
+			margin-right: 1.5rem
+		}
+	}
+
+	.footer-li {
+		width: 10rem;
+		margin-bottom: 3rem;
+		& > *:not(:last-child) {
+			margin-bottom: 1rem
+		}
+		ul > *:not(:last-child) {
+			margin-bottom: 1rem
+		}
+	}
+}

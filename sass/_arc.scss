@@ -1,0 +1,57 @@
+.arc {
+
+	@extend %max-width-center;
+	display: flex;
+	position: relative;
+
+	.arc-picture {
+
+		display: none;
+		@media screen and (min-width: 1366px) {
+			display: block;
+			background-color: beige;
+			border-top-right-radius: 20%;
+			margin-top: -25rem;
+			flex: 0 0 50%;
+		}
+	}
+
+	.arc-info {
+		align-self: center;
+		width: 100%;
+		text-align: center;
+
+
+		& >:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+
+		.arc-title {
+			position: relative;
+		}
+
+		.arc-title::after {
+			content: "";
+			position: absolute;
+			border-bottom: 1px solid lighten(black, 85%);
+			bottom: -11px;
+			width: 100%;
+			left: 0;
+			@media screen and (min-width: 1366px) {
+				width: 14%;
+			}
+		}
+
+		p {
+			@media screen and (min-width: 1366px) {
+				width: 24rem;
+			}
+		}
+
+		@media screen and (min-width: 1366px) {
+			text-align: initial;
+			margin-left: 5rem;
+			justify-content: flex-start;
+		}
+	}
+}

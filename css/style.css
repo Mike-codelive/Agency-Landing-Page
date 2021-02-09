@@ -1,0 +1,592 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@500&display=swap");
+/* Copied colors
+-------------------------------------------------------------- */
+/* Extends
+-------------------------------------------------------------- */
+header .hero-desc, .gallery, footer, .cards, .about, .team, .arc {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 4rem; }
+
+/* Reset
+-------------------------------------------------------------- */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Global styles
+-------------------------------------------------------------- */
+body {
+  font-family: 'Playfair Display', serif;
+  width: 100%;
+  overflow-x: hidden; }
+
+img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+  object-fit: cover; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+ul {
+  list-style: none; }
+
+.about-scroll--position {
+  position: absolute;
+  top: -2.5rem; }
+  @media screen and (min-width: 1366px) {
+    .about-scroll--position {
+      top: -69px; } }
+
+.arc-scroll--position {
+  position: absolute;
+  top: -3rem; }
+  @media screen and (min-width: 1366px) {
+    .arc-scroll--position {
+      top: -27rem; } }
+
+/* Btn, btn-Green, btn-White
+-------------------------------------------------------------- */
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--green {
+  background: linear-gradient(to right, #2F3B3D, #505A5B);
+  color: white; }
+  .btn--green::after {
+    background: linear-gradient(to right, #2F3B3D, #505A5B); }
+
+.btn--white {
+  background-color: #fff;
+  color: #07615F; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.hero-title {
+  font-size: 2rem;
+  color: white; }
+  @media screen and (min-width: 1366px) {
+    .hero-title {
+      font-size: 5rem; } }
+  @media screen and (min-width: 1024px) and (min-height: 1366px) {
+    .hero-title {
+      font-size: 5rem; } }
+
+@media screen and (min-width: 1366px) {
+  .hero-text {
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 1024px) and (min-height: 1366px) {
+  .hero-text {
+    font-size: 2rem; } }
+
+.gallery-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin-bottom: .5rem; }
+
+.gallery-details {
+  color: #8c8c8c; }
+
+.img-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -7rem;
+  color: white;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  font-family: "PT Sans", sans-serif; }
+  @media screen and (min-width: 1366px) {
+    .img-info {
+      padding: 0 3rem;
+      font-size: 1.5rem; } }
+  .img-info h1 {
+    font-family: "Playfair Display", serif;
+    text-transform: capitalize; }
+  .img-info p {
+    color: #d9d9d9; }
+  .img-info a {
+    align-self: flex-end; }
+    .img-info a:hover i {
+      transform: rotateZ(85deg); }
+    .img-info a i {
+      margin-left: 1rem;
+      transition: all 0.4s linear; }
+
+.card-info {
+  grid-row: 1 / 2; }
+  .card-info .card-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: .5rem; }
+  .card-info .card-price {
+    color: #8c8c8c;
+    margin-bottom: .5rem; }
+  .card-info .card-description {
+    color: #8c8c8c; }
+
+.about .about-title {
+  text-transform: capitalize;
+  font-size: 3rem;
+  border-bottom: 1px solid #8c8c8c;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem; }
+
+.about .about-info {
+  color: #8c8c8c; }
+  .about .about-info > :not(:last-child) {
+    margin-right: 1.5rem; }
+  .about .about-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem; }
+  .about .about-info p {
+    font-family: "PT Sans", sans-serif; }
+
+.teammate-data {
+  font-family: "PT Sans", sans-serif; }
+  .teammate-data > * {
+    font-weight: 300; }
+
+.team-info {
+  text-align: center; }
+  .team-info h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white; }
+    @media screen and (min-width: 1366px) {
+      .team-info h1 {
+        font-family: "PT Sans", sans-serif; } }
+
+.arc-info {
+  color: #8c8c8c; }
+  .arc-info > * {
+    font-weight: 300; }
+  .arc-info h1 {
+    font-size: 2rem; }
+  .arc-info p {
+    font-size: 1rem; }
+
+footer h1 {
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  position: relative; }
+
+footer .footer-first {
+  text-transform: uppercase; }
+  footer .footer-first::after {
+    content: ".";
+    font-size: 4.5rem;
+    position: absolute;
+    top: -51px; }
+
+footer p {
+  font-family: "PT Sans", sans-serif;
+  color: #8c8c8c; }
+
+footer li {
+  font-family: "PT Sans", sans-serif; }
+
+footer a {
+  color: #8c8c8c;
+  text-transform: capitalize; }
+
+footer .footer-icons > * {
+  color: black; }
+
+footer .footer-li h1 {
+  font-size: 1rem; }
+
+.card__price-box {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3rem; }
+  @media screen and (min-width: 700px) {
+    .card__price-box {
+      margin-bottom: 8rem; } }
+
+.card__price-only {
+  font-size: 1rem;
+  text-transform: uppercase; }
+  @media screen and (min-width: 1366px) {
+    .card__price-only {
+      font-size: 1.4rem; } }
+
+.card__price-value {
+  font-size: 3rem;
+  font-weight: 100; }
+  @media screen and (min-width: 1366px) {
+    .card__price-value {
+      font-size: 5rem; } }
+
+.navbar {
+  padding: .5rem 2rem;
+  backdrop-filter: blur(9px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  color: white; }
+  @media screen and (min-width: 1366px) {
+    .navbar .nav-center {
+      max-width: 1920px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 2rem;
+      width: 100%; } }
+  .navbar .nav-center .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .navbar .nav-toggle {
+    background: black;
+    padding: 0 .5rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white; }
+    @media screen and (min-width: 1366px) {
+      .navbar .nav-toggle {
+        display: none; } }
+    .navbar .nav-toggle:hover {
+      transform: scale(1.2); }
+  .navbar .nav-links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear; }
+    @media screen and (min-width: 1366px) {
+      .navbar .nav-links {
+        display: flex;
+        height: auto !important; } }
+    .navbar .nav-links a:active {
+      background-color: transparent; }
+    .navbar .nav-links .nav-link {
+      display: block;
+      text-transform: capitalize;
+      padding: 1rem 0; }
+      @media screen and (min-width: 1366px) {
+        .navbar .nav-links .nav-link {
+          color: #8c8c8c; } }
+      .navbar .nav-links .nav-link {
+        position: relative; }
+      .navbar .nav-links .nav-link:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 9px;
+        left: 0;
+        background-color: #FFF;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out; }
+      .navbar .nav-links .nav-link:hover:before {
+        visibility: visible;
+        transform: scaleX(1); }
+      @media screen and (max-width: 1366px) {
+        .navbar .nav-links .nav-link span {
+          background-color: black;
+          padding: .5rem; } }
+      @media screen and (min-width: 1366px) {
+        .navbar .nav-links .nav-link:not(:last-child) {
+          margin-right: 3rem; } }
+  .navbar .show-links {
+    height: 13.25rem; }
+
+header {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: url("../img/Large-Triangles.svg") center/cover no-repeat; }
+  @media screen and (min-width: 1366px) {
+    header {
+      background: transparent; } }
+  header:before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    backdrop-filter: blur(6px);
+    z-index: 1; }
+  header .bg-video {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover; }
+    @media screen and (min-width: 1366px) {
+      header .bg-video {
+        display: inline-block; } }
+  header .hero-desc {
+    width: 100%;
+    z-index: 3; }
+  header .hero-title {
+    padding-bottom: 2rem; }
+    @media screen and (min-width: 1366px) {
+      header .hero-title {
+        display: inline-block; } }
+  header .hero-text {
+    color: white;
+    margin-bottom: 3rem; }
+
+.gallery {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2.5rem; }
+  .gallery .first-col .gallery-info {
+    height: 300px;
+    padding-bottom: 3rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap; }
+  .gallery .first-col .gallery-img-2 {
+    height: 600px;
+    overflow: hidden; }
+  .gallery .second-col .gallery-img-1 {
+    height: 450px;
+    padding-bottom: 3rem; }
+  .gallery .second-col .gallery-img-3 {
+    height: 450px;
+    overflow: hidden; }
+  .gallery img {
+    height: 100%; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  footer .footer-travel {
+    width: 15rem;
+    margin-bottom: 3rem;
+    margin-right: 3rem; }
+    footer .footer-travel > :not(:last-child) {
+      margin-bottom: 1rem; }
+  footer .footer-icons > :not(:last-child) {
+    margin-right: 1.5rem; }
+  footer .footer-li {
+    width: 10rem;
+    margin-bottom: 3rem; }
+    footer .footer-li > *:not(:last-child) {
+      margin-bottom: 1rem; }
+    footer .footer-li ul > *:not(:last-child) {
+      margin-bottom: 1rem; }
+
+.cards {
+  display: none;
+  background: transparent;
+  padding: 0 5rem; }
+  @media screen and (min-width: 1366px) {
+    .cards {
+      display: flex;
+      justify-content: center;
+      transform: translateY(-50%); } }
+  .cards .card-single {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 12rem;
+    grid-column-gap: 2rem;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif; }
+    .cards .card-single:not(:last-child) {
+      margin-right: 1.3rem; }
+    .cards .card-single:hover .card-image {
+      transform: scale(1.3); }
+    .cards .card-single .card-image {
+      grid-row: 1 / 2;
+      max-width: 25rem;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: all .5s; }
+
+@media screen and (min-width: 1366px) {
+  .about {
+    padding: 4rem 8rem;
+    margin-bottom: 10rem; } }
+
+.about .about-info {
+  display: flex;
+  flex-wrap: wrap; }
+  @media screen and (min-width: 1000px) {
+    .about .about-info {
+      flex-wrap: unset; } }
+
+.team {
+  background-size: calc(100vw - 8rem);
+  background: url("../img/Large-Triangles.svg") center/cover no-repeat; }
+  @media screen and (min-width: 1366px) {
+    .team {
+      padding-bottom: 30rem; } }
+  .team .team-show {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .team .team-show--positioning {
+      top: 5rem;
+      width: 1rem;
+      height: 1rem; }
+    .team .team-show .card {
+      perspective: 150rem;
+      position: relative;
+      height: 499.33px; }
+      @media screen and (max-width: 545px) {
+        .team .team-show .card {
+          height: 352.33px; } }
+      .team .team-show .card__side {
+        height: 100%;
+        transition: all .8s ease;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+        .team .team-show .card__side::before {
+          content: ""; }
+        .team .team-show .card__side--back {
+          background-image: linear-gradient(to right bottom, #1A7472, #07615F);
+          transform: rotateY(180deg); }
+      .team .team-show .card:hover .card__side--front {
+        transform: rotateY(180deg) translateY(-5rem); }
+      .team .team-show .card:hover .card__side--back {
+        transform: rotateY(0deg) translateY(-5rem); }
+      .team .team-show .card__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center; }
+      .team .team-show .card__price-box {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 4rem; }
+    @media screen and (min-width: 1366px) {
+      .team .team-show {
+        margin-top: -15rem;
+        flex-wrap: unset; } }
+    .team .team-show::after {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid white;
+      bottom: 0;
+      width: 85%; }
+    .team .team-show .team-member {
+      width: 25rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 5rem; }
+      .team .team-show .team-member .teammate-data {
+        background: white;
+        padding: 2rem; }
+  .team .team-info {
+    display: block; }
+    .team .team-info h1 {
+      margin-bottom: 5rem; }
+    .team .team-info a {
+      place-self: flex-start; }
+    @media screen and (min-width: 1366px) {
+      .team .team-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem; } }
+
+.arc {
+  display: flex;
+  position: relative; }
+  .arc .arc-picture {
+    display: none; }
+    @media screen and (min-width: 1366px) {
+      .arc .arc-picture {
+        display: block;
+        background-color: beige;
+        border-top-right-radius: 20%;
+        margin-top: -25rem;
+        flex: 0 0 50%; } }
+  .arc .arc-info {
+    align-self: center;
+    width: 100%;
+    text-align: center; }
+    .arc .arc-info > :not(:last-child) {
+      margin-bottom: 1.5rem; }
+    .arc .arc-info .arc-title {
+      position: relative; }
+    .arc .arc-info .arc-title::after {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #d9d9d9;
+      bottom: -11px;
+      width: 100%;
+      left: 0; }
+      @media screen and (min-width: 1366px) {
+        .arc .arc-info .arc-title::after {
+          width: 14%; } }
+    @media screen and (min-width: 1366px) {
+      .arc .arc-info p {
+        width: 24rem; } }
+    @media screen and (min-width: 1366px) {
+      .arc .arc-info {
+        text-align: initial;
+        margin-left: 5rem;
+        justify-content: flex-start; } }

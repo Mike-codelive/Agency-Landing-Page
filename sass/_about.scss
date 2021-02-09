@@ -1,0 +1,16 @@
+.about {
+
+	@extend %max-width-center;
+	@media screen and (min-width: 1366px) {
+		padding: 4rem 8rem;
+		margin-bottom: 10rem;
+	}
+
+	.about-info {
+		display: flex;
+		flex-wrap: wrap;
+		@media screen and (min-width: 1000px) {
+			flex-wrap: unset;
+		}
+	}
+}

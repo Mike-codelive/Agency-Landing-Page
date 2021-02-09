@@ -1,0 +1,40 @@
+.cards {
+	@extend %max-width-center;
+	display: none;
+	background: transparent;
+	padding: 0 5rem;
+
+	@media screen and (min-width: 1366px) {
+		display: flex;
+		justify-content: center;
+		transform: translateY(-50%);
+	}
+
+	.card-single {
+		display: grid;
+		background-color: white;
+		grid-template-columns: 40% 1fr;
+		grid-template-rows: 12rem;
+		grid-column-gap: 2rem;
+		align-items: center;
+		font-family: 'PT Sans', sans-serif;
+
+		&:not(:last-child) {
+			margin-right: 1.3rem;
+		}
+
+		&:hover .card-image {
+			transform: scale(1.3);
+		}
+
+		.card-image {
+			grid-row: 1 / 2;
+			max-width: 25rem;
+			height: 100%;
+			// transform: scale(1.4);
+			backface-visibility: hidden;
+			// filter: blur(3px) brightness(80%);
+			transition: all .5s;
+		}
+	}
+}
