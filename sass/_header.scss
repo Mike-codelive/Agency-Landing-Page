@@ -53,3 +53,36 @@ header {
     margin-bottom: 3rem;
   }
 }
+
+.loader {
+  background: url("../img/Large-Triangles.svg") center/cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9;
+  position: absolute;
+  &_logo {
+    width: 5% !important;
+    height: 5% !important;
+  }
+  &.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+    display: none;
+  }
+  h1 {
+    font-size: 1rem;
+    color: $color-secondary-light;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+

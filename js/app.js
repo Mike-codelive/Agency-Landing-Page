@@ -1,3 +1,9 @@
+
+window.onload = () => {
+	const loader = document.querySelector(".loader");
+	loader.className += " hidden";
+}
+
 /* select button and links
 -------------------------------------------------------------- */
 const navBtn = document.getElementById("nav-toggle");
