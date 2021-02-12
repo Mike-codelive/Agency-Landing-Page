@@ -1,7 +1,9 @@
 
 window.onload = () => {
 	const loader = document.querySelector(".loader");
-	loader.className += " hidden";
+	setTimeout(() => {
+		loader.className += " hidden";
+	}, 3000);
 }
 
 /* select button and links
